@@ -38,8 +38,8 @@
             or meats.
           </p>
         </div>
-        <div class="card__prep-time">
-          <h2>Preparation time</h2>
+        <div class="card__prep-time" aria-labelledby="prep-time">
+          <h2 id="prep-time">Preparation time</h2>
           <ul>
             <li><strong>Total:</strong> Approximately 10 minutes</li>
             <li itemprop="prepTime" content="PT5M">
@@ -50,8 +50,8 @@
             </li>
           </ul>
         </div>
-        <div class="card__ingredients">
-          <h2>Ingredients</h2>
+        <div class="card__ingredients" aria-labelledby="ingredients">
+          <h2 id="ingredients">Ingredients</h2>
           <ul>
             <li itemprop="recipeIngredient">2-3 large eggs</li>
             <li itemprop="recipeIngredient">Salt, to taste</li>
@@ -65,8 +65,11 @@
             </li>
           </ul>
         </div>
-        <div itemprop="recipeInstructions">
-          <h2>Instructions</h2>
+        <div
+          itemprop="recipeInstructions"
+          aria-labelledby="instructions"
+        >
+          <h2 id="instructions">Instructions</h2>
           <ol>
             <li>
               <strong>Beat the eggs:</strong> In a bowl, beat the eggs
@@ -101,8 +104,8 @@
             </li>
           </ol>
         </div>
-        <div itemprop="nutrition">
-          <h2>Nutrition</h2>
+        <div itemprop="nutrition" aria-labelledby="nutrition">
+          <h2 id="nutrition">Nutrition</h2>
           <table class="nutrition-table">
             <caption>
               The table below shows nutritional values per serving

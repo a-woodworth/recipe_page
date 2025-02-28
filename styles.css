@@ -46,6 +46,7 @@
   --radius-m: 1.5rem;
   --stroke-width: 1px;
   --stroke-solid: var(--stroke-width) solid var(--stone-150);
+  --stroke-dotted: var(--stroke-width) dotted currentColor;
 
   /* Spacing */
   --spacing-100: 0.5rem;
@@ -97,6 +98,21 @@ img {
   width: 100%;
 }
 
+a:not([class]) {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+a:hover {
+  color: var(--rose-800);
+  text-decoration: none;
+}
+
+a:focus {
+  outline: var(--stroke-dotted);
+  outline-offset: 2px;
+}
+
 body {
   background-color: var(--stone-100);
   font: var(--text-4);
@@ -106,6 +122,7 @@ body {
 
 article {
   background-color: var(--white);
+  color: var(--stone-600);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-400);
@@ -119,6 +136,7 @@ article {
 }
 
 h1 {
+  color: var(--stone-900);
   font: var(--text-mobile);
   line-height: var(--leading-none);
   margin-block-end: var(--spacing-300);
@@ -171,7 +189,7 @@ ol li::marker {
 }
 
 .card__ingredients {
-  border-bottom: 1px solid var(--stone-150);
+  border-bottom: var(--stroke-solid);
   padding-block-end: var(--spacing-400);
 }
 
@@ -192,12 +210,11 @@ ol li::marker {
   }
 
   th {
-    color: var(--stone-600);
     font-weight: 400;
   }
 
   tr {
-    border-bottom: 1px solid var(--stone-150);
+    border-bottom: var(--stroke-solid);
     color: var(--brown-800);
     font-weight: 700;
     padding-block-start: var(--spacing-150);
@@ -218,5 +235,8 @@ ol li::marker {
 footer {
   padding-block-start: var(--spacing-100);
   text-align: center;
-  text-wrap: balance;
+
+  a {
+    text-wrap: nowrap;
+  }
 }
