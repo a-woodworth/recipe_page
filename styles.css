@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('/assets/fonts/YoungSerif-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('assets/fonts/Outfit-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('assets/fonts/Outfit-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('assets/fonts/Outfit-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  /* Colors */
+  --brown-800: hsl(14 45% 36%);
+  --rose-800: hsl(332 51% 32%);
+  --rose-50: hsl(330 100% 98%);
+  --stone-900: hsl(24 5% 18%);
+  --stone-600: hsl(30 10% 34%);
+  --stone-150: hsl(30 18% 87%);
+  --stone-100: hsl(30 54% 90%);
+  --white: hsl(0 0% 100%);
+
+  /* Border and Radius */
+  --radius-s: 0.75rem;
+  --radius-m: 1.5rem;
+  --stroke-width: 1px;
+  --stroke-solid: var(--stroke-width) solid var(--stone-150);
+
+  /* Spacing */
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-1600: 8rem;
+
+  /* Typography */
+  --leading-none: 1;
+  --leading-standard: 1.5;
+  --text-1: 400 2.5rem 'YoungSerif', serif;
+  --text-mobile: 400 2.25rem 'YoungSerif', serif;
+  --text-2: 400 1.75rem 'YoungSerif', serif;
+  --text-3: 600 1.25rem 'Outfit', sans-serif;
+  --text-4: 400 1rem 'Outfit', sans-serif;
+  --text-4-bold: 700 1rem 'Outfit', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--stone-100);
+  font: var(--text-4);
+  line-height: var(--leading-standard);
+  min-height: 100vh;
+}
+
+article {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  padding-block-end: var(--spacing-500);
+  padding-inline: var(--spacing-400);
+
+  img {
+    margin-inline-start: calc(-1 * var(--spacing-400));
+    width: calc(100% + (2 * var(--spacing-400)));
+  }
+}
+
+h1 {
+  font: var(--text-mobile);
+  line-height: var(--leading-none);
+  margin-block-end: var(--spacing-300);
+}
+
+h2 {
+  color: var(--brown-800);
+  font: var(--text-2);
+  line-height: var(--leading-none);
+  margin-block-end: var(--spacing-200);
+}
+
+ul li,
+ol li {
+  margin-inline-start: calc(var(--spacing-200) + var(--spacing-100));
+}
+
+li {
+  padding-inline-start: var(--spacing-200);
+}
+
+li::marker {
+  color: var(--brown-800);
+}
+
+ol li::marker {
+  font-weight: 700;
+}
+
+.card__header {
+  margin-block-start: var(--spacing-100);
+}
+
+.card__prep-time {
+  background-color: var(--rose-50);
+  border-radius: var(--radius-s);
+  padding-block: var(--spacing-300);
+  padding-inline: var(--spacing-300);
+
+  h2 {
+    color: var(--rose-800);
+    font: var(--text-3);
+    line-height: var(--leading-none);
+    margin-block-end: var(--spacing-200);
+  }
+
+  li::marker {
+    color: var(--rose-800);
+  }
+}
+
+.card__ingredients {
+  border-bottom: 1px solid var(--stone-150);
+  padding-block-end: var(--spacing-400);
+}
+
+.nutrition-table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+
+  caption {
+    text-align: left;
+  }
+
+  th,
+  tr {
+    display: flex;
+    flex-basis: 50%;
+    gap: var(--spacing-150);
+  }
+
+  th {
+    color: var(--stone-600);
+    font-weight: 400;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--stone-150);
+    color: var(--brown-800);
+    font-weight: 700;
+    padding-block-start: var(--spacing-150);
+    padding-block-end: var(--spacing-150);
+    padding-inline: var(--spacing-400);
+  }
+
+  tr:first-child {
+    padding-block-start: var(--spacing-300);
+  }
+
+  tr:last-child {
+    border-bottom: none;
+    padding-block-end: 0;
+  }
+}
+
+footer {
+  padding-block-start: var(--spacing-100);
+  text-align: center;
+  text-wrap: balance;
+}
