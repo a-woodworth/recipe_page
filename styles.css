@@ -140,7 +140,7 @@ article {
     padding-inline: var(--spacing-500);
   }
 
-  @media (min-width: 46rem) {
+  @media (min-width: 75rem) {
     max-width: 46rem;
   }
 }
