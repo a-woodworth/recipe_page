@@ -33,7 +33,7 @@ Your challenge is to build out this recipe page and get it looking as close to t
 ### Links
 
 - Solution URL: [Solution]()
-- Live Site URL: [Live Site](https://github.com/a-woodworth/recipe_page)
+- Live Site URL: [Live Site](https://a-woodworth.github.io/recipe_page/)
 
 ### Built with
 
