@@ -223,7 +223,8 @@ ol li::marker {
   }
 }
 
-.card__ingredients {
+.card__ingredients,
+.card__instructions {
   border-bottom: var(--stroke-solid);
   padding-block-end: var(--spacing-400);
 }
