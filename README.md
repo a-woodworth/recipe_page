@@ -32,7 +32,7 @@ Your challenge is to build out this recipe page and get it looking as close to t
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/recipe-page----html-and-css-variables-QliupgZzvr)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/recipe_page/)
 
 ### Built with
