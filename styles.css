@@ -280,9 +280,10 @@ footer {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 3rem;
+  grid-template-rows: auto auto;
 
   @media (min-width: 38.5rem) {
     padding-block-start: var(--spacing-1600);
+    padding-block-end: calc(var(--spacing-1600) - 2.5rem);
   }
 }
